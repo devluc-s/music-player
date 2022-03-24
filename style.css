@@ -216,11 +216,12 @@ img {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Lato', sans-serif;
   background: var(--color-one);
   font-weight: 400;
   line-height: 1.4;
   color: var(--color-three);
+  letter-spacing: .8px;
 }
 
 ::-webkit-scrollbar {
@@ -235,6 +236,7 @@ body {
   --color-four: #FAFAFA;
   --color-five: #8F48FA;
   --color-six: #793DD4;
+  --timing: cubic-bezier(0.4, 0, 1, 1) 500ms;
 }
 
 
@@ -262,7 +264,8 @@ input[type="text"]:hover {
 /* HEADER */
 
 .header-player {
-  padding: 20px 10px;
+  box-shadow: 0px 0px 0px 1px var(--color-two);
+  padding: 25px 10px;
 }
 
 .flex-player {
@@ -286,6 +289,7 @@ input[type="text"]:hover {
   font-size: 18px;
   color: var(--color-three);
   font-weight: 700;
+  transition: color var(--timing);
 }
 
 .flex-player a:hover {
@@ -321,7 +325,7 @@ section {
   justify-content: space-between;
 }
 
-ul.playlist {
+ul.column-playlist {
   display: grid;
   grid-template-columns: repeat(6, minmax(150px, 1fr));
   gap: 25px;
@@ -329,47 +333,43 @@ ul.playlist {
   overflow-x: scroll;
 }
 
-.playlist li {
-  cursor: pointer;
-}
-
-.card-image {
+.column-playlist-image {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card-image img {
+.column-playlist-image img {
   border-radius: .5rem;
-  transition: opacity ease-in-out 500ms;
+  transition: opacity var(--timing);
 }
 
-.playlist li:hover img {
+.column-playlist li:hover img {
   opacity: .2;
 }
 
-.card-image a {
+.column-playlist-image a {
   position: absolute;
-  transition: opacity ease-in-out 500ms;
+  transition: opacity var(--timing);
   opacity: 0;
   display: inherit;
   box-shadow: 0px 0px 0px 1px var(--color-three);
-  padding: 9px;
+  padding: 6%;
   border-radius: 50%;
 }
 
-.card-image a:hover {
+.column-playlist-image a:hover {
   background: var(--color-six);
   box-shadow: 0px 0px 0px 1px var(--color-six);
 }
 
-.playlist li:hover a {
+.column-playlist li:hover a {
   opacity: unset;
 }
 
 
-.card-content p, .card-content h3 {
+.column-playlist-content p, .column-playlist-content h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -399,7 +399,7 @@ ul.playlist {
   justify-content: center;
   font-weight: 700;
   color: var(--color-four);
-  transition: background-color ease-in-out 500ms;
+  transition: background-color var(--timing);
 }
 
 .generes ul li a:hover {
@@ -410,6 +410,7 @@ ul.playlist {
   color: var(--color-three);
   font-weight: 700;
   text-align: center;
+  transition: color var(--timing);
 }
 
 .card-artist:hover {
