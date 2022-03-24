@@ -262,8 +262,7 @@ input[type="text"]:hover {
 /* HEADER */
 
 .header-player {
-  background: var(--color-two);
-  padding: 25px 10px;
+  padding: 20px 10px;
 }
 
 .flex-player {
