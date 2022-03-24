@@ -262,7 +262,7 @@ input[type="text"]:hover {
 /* HEADER */
 
 .header-player {
-  box-shadow: 0px 0px 0px 1px var(--color-two);
+  background: var(--color-two);
   padding: 25px 10px;
 }
 
