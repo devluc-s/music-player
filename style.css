@@ -265,7 +265,7 @@ input[type="text"]:hover {
 
 .header-player {
   box-shadow: 0px 0px 0px 1px var(--color-two);
-  padding: 25px 10px;
+  padding: 15px 10px;
 }
 
 .flex-player {
@@ -441,11 +441,28 @@ ul.column-playlist {
   height: 70px;
   width: 70px;
   margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-played img {
   border-radius: 0.5rem;
-  object-fit: contain;
+  transition: opacity var(--timing);
+}
+
+.image-played:hover img{
+  opacity: .2;
+}
+.image-played a{
+  position: absolute;
+  opacity: 0;
+  transition: opacity var(--timing);
+}
+.image-played:hover a{
+  opacity: unset;
 }
 
 .music-playing{
@@ -454,7 +471,7 @@ ul.column-playlist {
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 10px;
+  padding: 5px 10px;
 }
 
 
