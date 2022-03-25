@@ -328,8 +328,9 @@ section {
 
 ul.column-playlist {
   display: grid;
-  grid-template-columns: repeat(6, minmax(150px, 1fr));
-  gap: 25px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 1fr);
+  column-gap: 25px;
   white-space: nowrap;
   overflow-x: scroll;
 }
@@ -436,11 +437,13 @@ ul.column-playlist {
 .left-played {
   display: flex;
   flex: 1;
+  word-break: break-all;
 }
 
 .image-played {
   height: 70px;
-  width: 70px;
+  min-width: 70px;
+  max-width: 70px;
   margin-right: 15px;
   cursor: pointer;
   position: relative;
