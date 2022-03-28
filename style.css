@@ -211,7 +211,6 @@ template {
 
 img {
   max-width: 100%;
-  width: 100%;
   pointer-events: none;
 }
 
@@ -347,6 +346,12 @@ ul.column-playlist {
   transition: opacity var(--timing);
 }
 
+.column-playlist-content>:nth-child(+n){
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .column-playlist li:hover img {
   opacity: .2;
 }
@@ -370,12 +375,6 @@ ul.column-playlist {
   opacity: unset;
 }
 
-
-.column-playlist-content p, .column-playlist-content h3 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
 
 .flex {
   display: grid;
@@ -419,9 +418,7 @@ ul.column-playlist {
   color: var(--color-six);
   fill: var(--color-six);
 }
-.card-artist img{
-  padding: 10px;
-}
+
 
 .flex-card {
   display: flex;
