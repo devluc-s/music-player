@@ -327,9 +327,10 @@ section {
 
 .ColumnPlaylistContainer {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-auto-columns: minmax(150px, 1fr);
-  gap: 25px;
+  grid-auto-flow: column;
+  column-gap: 25px;
   white-space: nowrap;
   overflow-x: scroll;
 }
