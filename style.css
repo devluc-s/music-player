@@ -286,7 +286,6 @@ input[type="text"]:hover {
 .column-header a {
   display: flex;
   align-items: center;
-  font-size: 18px;
   color: var(--color-three);
   font-weight: 700;
   transition: color var(--timing);
@@ -426,7 +425,21 @@ section {
   grid-template-columns: 70px 1fr auto auto;
   column-gap: 15px;
   align-items: center;
-  margin-bottom: 25px;
+  padding: 15px 0;
+  
+}
+
+.MostPlayedContainer:not(ul>li:last-child .MostPlayedContainer){
+  border-bottom: 1px solid var(--color-two);
+}
+li:first-child .MostPlayedContainer{
+  padding-bottom: 15px;
+  padding-top: 0px;
+}
+
+li:last-child .MostPlayedContainer{
+  padding-bottom: 0px;
+  padding-top: 15px;
 }
 
 
@@ -441,6 +454,7 @@ section {
   align-self: flex-start;
   justify-content: center;
 }
+
 
 .MostPlayedImageItem img {
   border-radius: 0.5rem;
