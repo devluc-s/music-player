@@ -437,12 +437,6 @@ li:first-child .MostPlayedContainer{
   padding-top: 0px;
 }
 
-li:last-child .MostPlayedContainer{
-  padding-bottom: 0px;
-  padding-top: 15px;
-}
-
-
 .MostPlayedImageItem {
   height: 70px;
   min-width: 70px;
