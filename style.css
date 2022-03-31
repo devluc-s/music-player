@@ -325,7 +325,7 @@ section {
   justify-content: space-between;
 }
 
-ul.column-playlist {
+.ColumnPlaylistContainer {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(150px, 1fr);
@@ -334,29 +334,29 @@ ul.column-playlist {
   overflow-x: scroll;
 }
 
-.column-playlist-image {
+.ColumnPlaylistImage {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.column-playlist-image img {
+.ColumnPlaylistImage img {
   border-radius: .5rem;
   transition: opacity var(--timing);
 }
 
-.column-playlist-content>:nth-child(+n){
+.ColumnPlaylistContent>:nth-child(+n){
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.column-playlist li:hover img {
+.ColumnPlaylistContainer li:hover img {
   opacity: .2;
 }
 
-.column-playlist-image a {
+.ColumnPlaylistImage a {
   position: absolute;
   transition: opacity var(--timing);
   opacity: 0;
@@ -366,24 +366,24 @@ ul.column-playlist {
   border-radius: 50%;
 }
 
-.column-playlist-image a:hover {
+.ColumnPlaylistImage a:hover {
   background: var(--color-six);
   box-shadow: 0px 0px 0px 1px var(--color-six);
 }
 
-.column-playlist li:hover a {
+.ColumnPlaylistContainer li:hover a {
   opacity: unset;
 }
 
 
-.flex {
+.GridColumnContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
 
 
-.generes ul, .artists ul {
+.ColumnContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 25px;
@@ -391,7 +391,7 @@ ul.column-playlist {
   margin-bottom: 25px;
 }
 
-.generes ul li a {
+.ColumnItemGeneres a {
   background: var(--color-two);
   padding: 15px;
   border-radius: .5rem;
@@ -403,66 +403,58 @@ ul.column-playlist {
   transition: background-color var(--timing);
 }
 
-.generes ul li a:hover {
+.ColumnItemGeneres a:hover {
   background: var(--color-six);
 }
 
-.card-artist {
+.ColumnCardArtist {
   color: var(--color-three);
   font-weight: 700;
   text-align: center;
   transition: color var(--timing);
 }
 
-.card-artist:hover {
+.ColumnCardArtist:hover {
   color: var(--color-six);
   fill: var(--color-six);
 }
 
 
-.flex-card {
-  display: flex;
+.MostPlayedContainer {
+  display: grid;
+  grid-template-columns: 70px 1fr auto auto;
+  column-gap: 15px;
   align-items: center;
   margin-bottom: 25px;
-  color: var(--color-three);
 }
 
-.flex-card span {
-  margin-left: 15px;
-}
 
-.left-played {
-  display: flex;
-  flex: 1;
-  word-break: break-all;
-}
-
-.image-played {
+.MostPlayedImageItem {
   height: 70px;
   min-width: 70px;
   max-width: 70px;
-  margin-right: 15px;
   cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
+  align-self: flex-start;
   justify-content: center;
 }
 
-.image-played img {
+.MostPlayedImageItem img {
   border-radius: 0.5rem;
   transition: opacity var(--timing);
 }
 
-.image-played:hover img{
+.MostPlayedImageItem:hover img{
   opacity: .2;
 }
-.image-played a{
+.MostPlayedImageItem a{
   position: absolute;
   opacity: 0;
   transition: opacity var(--timing);
 }
-.image-played:hover a{
+.MostPlayedImageItem:hover a{
   opacity: unset;
 }
 
@@ -541,7 +533,7 @@ ul.column-playlist {
     display: none;
   }
 
-  .flex {
+  .GridColumnContainer {
     grid-template-columns: 1fr;
   }
 
